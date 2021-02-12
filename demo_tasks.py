@@ -7,7 +7,7 @@ huey = SqliteHuey(
 )
 
 
-@huey.task(name='xxx')
+@huey.task()
 def add(a, b):
     print(os.getpid(), f": {a}+{b}={a+b}")
     return a + b
